@@ -20,7 +20,7 @@ function AddBlog() {
             form.append(file.item(key), file.item(key))
         })
         try {
-            const { data } = await axios.post('http://localhost:5000/blog/create', form)
+            const { data } = await axios.post(`${import.meta.env.VITE_DOMAIN}/blog/create`, form)
             setSucces(data.message)
             setTimeout(() => {
                 forms.current.reset()

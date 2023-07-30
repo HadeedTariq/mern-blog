@@ -12,7 +12,7 @@ function Home() {
   }
   useEffect(() => {
     const fetchBlogs=async()=>{
-      const {data}=await axios.get('http://localhost:5000/blog/get')
+      const {data}=await axios.get(`${import.meta.env.VITE_DOMAIN}/blog/get`)
       dispatch(setBlogs(data))
     }
     fetchBlogs()

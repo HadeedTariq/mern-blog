@@ -13,7 +13,7 @@ function Form({ login, register, btn }) {
     const form=new FormData(e.currentTarget)
     const datas=Object.fromEntries(form)
     try {
-     const {data}= await axios.post(`http://localhost:5000/user${url}`,datas)
+     const {data}= await axios.post(`${import.meta.env.VITE_DOMAIN}/user${url}`,datas)
      if(data){
       dispatch(setData(data))
       navigate('/')
