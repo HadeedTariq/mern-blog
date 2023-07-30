@@ -17,4 +17,5 @@ app.use(cookieParser())
 app.use(cors())
 app.use('/user',router)
 app.use('/blog',blogRouter)
-app.listen(PORT,()=>console.log(`App is listening on port: ${PORT}`))
+// app.listen(PORT,()=>console.log(`App is listening on port: ${PORT}`))
+export default app;
